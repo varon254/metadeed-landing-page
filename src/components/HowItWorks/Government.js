@@ -1,0 +1,172 @@
+import { Typography } from "@material-tailwind/react";
+import React from "react";
+
+function GovernementTab() {
+  return (
+    <div>
+      <div
+        className="flex items-center gap-3 mx-auto justify-center"
+        style={{
+          paddingTop: "1rem",
+          paddingBottom: "1rem",
+          paddingLeft: "4rem",
+          paddingRight: "4rem",
+        }}
+      >
+        <div
+          className="w-full rounded-xl p-10 flex items-center"
+          style={{
+            boxShadow:
+              "5px 4px 6px 5px rgba(196, 169, 210, 0.12), 2px 2px 2px 1px rgba(196, 169, 210, 0.12)",
+            padding: "10px 40px",
+            textAlign: "left",
+            height: "138px",
+          }}
+        >
+          <div
+            className="font-bold"
+            style={{ fontSize: "48px", color: "#874FA8", width: "60px" }}
+          >
+            <h1>1</h1>
+          </div>
+          <div className="flex flex-col justify-start">
+            <Typography className="font-medium">
+              <h3 style={{ fontSize: "22px", color: "#000" }}>
+                Support Attestation Infrastructure
+              </h3>
+            </Typography>
+            <Typography>
+              <span style={{ fontSize: "14px", color: "#000" }}>
+                <li>
+                  Enable verified identity, credit, ownership, and
+                  <br /> insurance attestations via UAE Pass, Etihad Credit
+                  Bureau, <br />
+                  and DLD systems—ensuring legal trust and system integrity.{" "}
+                </li>{" "}
+              </span>
+            </Typography>
+          </div>
+        </div>
+        <div
+          className="w-full rounded-xl p-10 flex items-center"
+          style={{
+            boxShadow:
+              "5px 4px 6px 5px rgba(196, 169, 210, 0.12), 2px 2px 2px 1px rgba(196, 169, 210, 0.12)",
+            padding: "10px 40px",
+            textAlign: "left",
+            height: "138px",
+          }}
+        >
+          <div
+            className="font-bold"
+            style={{ fontSize: "48px", color: "#874FA8", width: "60px" }}
+          >
+            <h1>2</h1>
+          </div>
+          <div className="flex flex-col justify-start">
+            <Typography className="font-medium">
+              <h3 style={{ fontSize: "22px", color: "#000" }}>
+                Drive Digital Dirham Adoption
+              </h3>
+            </Typography>
+            <Typography>
+              <span style={{ fontSize: "14px", color: "#000" }}>
+                <li>
+                  Position the Digital AED as the official settlement currency
+                  <br />
+                  for on-chain real estate transactions—programmable, <br />
+                  compliant, and fast.{" "}
+                </li>{" "}
+              </span>
+            </Typography>
+          </div>
+        </div>
+      </div>
+      <div
+        className="flex items-center gap-3 mx-auto justify-center"
+        style={{
+          paddingBottom: "3rem",
+          paddingLeft: "4rem",
+          paddingRight: "4rem",
+        }}
+      >
+        <div
+          className="w-full rounded-xl p-10 flex items-center"
+          style={{
+            boxShadow:
+              "5px 4px 6px 5px rgba(196, 169, 210, 0.12), 2px 2px 2px 1px rgba(196, 169, 210, 0.12)",
+            padding: "10px 40px",
+            textAlign: "left",
+            height: "138px",
+          }}
+        >
+          <div
+            className="font-bold"
+            style={{
+              fontSize: "48px",
+              color: "#874FA8",
+              width: "60px",
+            }}
+          >
+            <h1>3</h1>
+          </div>
+          <div className="flex flex-col justify-start">
+            <Typography className="font-medium">
+              <h3 style={{ fontSize: "22px", color: "#000" }}>
+                Ensure Regulatory Oversight
+              </h3>
+            </Typography>
+            <Typography>
+              <span style={{ fontSize: "14px", color: "#000" }}>
+                <li>
+                  Use MetaDeed’s dashboards to monitor transactions, <br />
+                  ownership changes, mortgages, and attestations—
+                  <br />
+                  without storing private data on-chain.
+                </li>
+              </span>
+            </Typography>
+          </div>
+        </div>
+        <div
+          className="w-full rounded-xl p-10 flex items-center"
+          style={{
+            boxShadow:
+              "5px 4px 6px 5px rgba(196, 169, 210, 0.12), 2px 2px 2px 1px rgba(196, 169, 210, 0.12)",
+            padding: "10px 40px",
+            textAlign: "left",
+            height: "138px",
+          }}
+        >
+          <div
+            className="font-bold"
+            style={{ fontSize: "48px", color: "#874FA8", width: "60px" }}
+          >
+            <h1>4</h1>
+          </div>
+          <div className="flex flex-col justify-start">
+            <Typography className="font-medium">
+              <h3
+                style={{ fontSize: "22px", color: "#000", lineHeight: "1.25" }}
+              >
+                Legal Assurance & Dispute Resolution
+              </h3>
+            </Typography>
+            <Typography>
+              <span style={{ fontSize: "14px", color: "#000" }}>
+                <li>
+                  Integrate verified attestations into existing legal <br />
+                  frameworks to streamline dispute resolution and maintain
+                  <br />
+                  jurisdictional clarity in on-chain transactions.{" "}
+                </li>{" "}
+              </span>
+            </Typography>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default GovernementTab;
