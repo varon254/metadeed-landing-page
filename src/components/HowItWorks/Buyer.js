@@ -1,7 +1,185 @@
 import { Button, Typography } from "@material-tailwind/react";
 import React from "react";
+import useIsMobile from "../context/useIsMobile";
 
 function BuyerTab() {
+  const isMobile = useIsMobile();
+
+  if (isMobile) {
+    return (
+      <div>
+        <div
+          className="w-full rounded-xl flex items-center"
+          style={{
+            boxShadow:
+              "5px 4px 6px 5px rgba(196, 169, 210, 0.12), 2px 2px 2px 1px rgba(196, 169, 210, 0.12)",
+            padding: "20px 20px",
+            textAlign: "left",
+            height: "100%",
+            margin: "0.5rem 0",
+          }}
+        >
+          <div
+            className="font-bold"
+            style={{ fontSize: "40px", color: "#874FA8", width: "50px" }}
+          >
+            <h1>1</h1>
+          </div>
+          <div className="flex flex-col justify-start">
+            <Typography className="font-medium">
+              <h3 style={{ fontSize: "18px", color: "#000" }}>
+                Create Profile
+              </h3>
+            </Typography>
+            <Typography>
+              <span style={{ fontSize: "12px", color: "#000" }}>
+                <li>Get attestation from UAE Pass with EAS </li>{" "}
+                <li>Sign in with Eth Wallet</li>
+              </span>
+            </Typography>
+          </div>
+        </div>
+        <div
+          className="w-full rounded-xl flex items-center"
+          style={{
+            boxShadow:
+              "5px 4px 6px 5px rgba(196, 169, 210, 0.12), 2px 2px 2px 1px rgba(196, 169, 210, 0.12)",
+            padding: "20px 20px",
+            textAlign: "left",
+            height: "100%",
+            margin: "0.5rem 0",
+          }}
+        >
+          <div
+            className="font-bold"
+            style={{ fontSize: "40px", color: "#874FA8", width: "50px" }}
+          >
+            <h1>2</h1>
+          </div>
+          <div className="flex flex-col justify-start">
+            <Typography className="font-medium">
+              <h3 style={{ fontSize: "18px", color: "#000" }}>
+                Browse & Make Offer
+              </h3>
+            </Typography>
+            <Typography>
+              <span style={{ fontSize: "12px", color: "#000" }}>
+                <li>Discover verified property </li>{" "}
+                <li>Submit your offer with a smart contract deposit</li>
+              </span>
+            </Typography>
+          </div>
+        </div>
+        <div
+          className="w-full rounded-xl flex items-center"
+          style={{
+            boxShadow:
+              "5px 4px 6px 5px rgba(196, 169, 210, 0.12), 2px 2px 2px 1px rgba(196, 169, 210, 0.12)",
+            padding: "20px 20px",
+            textAlign: "left",
+            height: "100%",
+            margin: "0.5rem 0",
+          }}
+        >
+          <div
+            className="font-bold"
+            style={{
+              fontSize: "40px",
+              color: "#874FA8",
+              width: "60px",
+            }}
+          >
+            <h1>3</h1>
+          </div>
+          <div className="flex flex-col justify-start">
+            <Typography className="font-medium">
+              <h3 style={{ fontSize: "18px", color: "#000" }}>
+                Get Financed (If Needed)
+              </h3>
+            </Typography>
+            <Typography>
+              <span style={{ fontSize: "12px", color: "#000" }}>
+                <li>
+                  Get credit attestation from Etihad Credit Bureau account
+                </li>{" "}
+                <li>Choose from registered DeFi or institutional lenders</li>
+                <li>Lender transfers funds into the escrow smart contract</li>
+              </span>
+            </Typography>
+          </div>
+        </div>
+        <div
+          className="w-full rounded-xl flex items-center"
+          style={{
+            boxShadow:
+              "5px 4px 6px 5px rgba(196, 169, 210, 0.12), 2px 2px 2px 1px rgba(196, 169, 210, 0.12)",
+            padding: "20px 20px",
+            textAlign: "left",
+            height: "100%",
+            margin: "0.5rem 0",
+          }}
+        >
+          <div
+            className="font-bold"
+            style={{ fontSize: "40px", color: "#874FA8", width: "60px" }}
+          >
+            <h1>4</h1>
+          </div>
+          <div className="flex flex-col justify-start">
+            <Typography className="font-medium">
+              <h3 style={{ fontSize: "18px", color: "#000" }}>
+                Pay Mortgage Monthly
+              </h3>
+            </Typography>
+            <Typography>
+              <span style={{ fontSize: "12px", color: "#000" }}>
+                <li>Smart contract handles automated monthly payments </li>{" "}
+                <li>
+                  Track balance, interest, and schedule from your dashboard
+                </li>
+              </span>
+            </Typography>
+          </div>
+        </div>
+        <div
+          className="w-full rounded-xl flex items-center"
+          style={{
+            boxShadow:
+              "5px 4px 6px 5px rgba(196, 169, 210, 0.12), 2px 2px 2px 1px rgba(196, 169, 210, 0.12)",
+            padding: "20px 20px",
+            textAlign: "left",
+            height: "100%",
+            margin: "0.5rem 0",
+          }}
+        >
+          <div
+            className="font-bold"
+            style={{
+              fontSize: "40px",
+              color: "#874FA8",
+              width: "60px",
+            }}
+          >
+            <h1>5</h1>
+          </div>
+          <div className="flex flex-col justify-start">
+            <Typography className="font-medium">
+              <h3 style={{ fontSize: "18px", color: "#000" }}>Own It</h3>
+            </Typography>
+            <Typography>
+              <span style={{ fontSize: "12px", color: "#000" }}>
+                <li>
+                  Upon full repayment, NFT of title deed is released to your
+                  wallet
+                </li>{" "}
+                <li>You're now the on-chain verified property owner</li>
+              </span>
+            </Typography>
+          </div>
+        </div>
+      </div>
+    );
+  }
   return (
     <div>
       <div

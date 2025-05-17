@@ -5,14 +5,14 @@ function CallToAction() {
   return (
     <div style={{ marginTop: "10rem", marginBottom: "3rem" }}>
       <div className="w-full flex gap-4 mt-4 justify-center">
-        <a href="/join-waiting-list">
+        <a href="/request-a-demo">
           <Button
             size="lg"
             variant="outlined"
             className="normal-case font-medium font-grotesk py-3 w-[250px] rounded-md border-2"
             style={{ width: "270px", height: "60px", fontSize: "18px" }}
           >
-            <h3>Join Waiting List</h3>
+            <h3>Request a Demo</h3>
           </Button>
         </a>
         <a href="/partner-with-us">

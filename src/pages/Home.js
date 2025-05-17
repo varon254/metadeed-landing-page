@@ -10,8 +10,26 @@ import BuiltIn from "../components/builtIn";
 import Comparison from "../components/comparison";
 import Faqs from "../components/faqs";
 import CallToAction from "../components/callToAction";
+import useIsMobile from "../components/context/useIsMobile";
 
 function Home() {
+  const isMobile = useIsMobile();
+
+  if (isMobile) {
+    return (
+      <div>
+        <NavBar />
+        <div style={{ padding: "0 1rem" }}>
+          <Hero />
+          <About />
+          <HowItWorks />
+          <Faqs />
+        </div>
+        {/* <Footer /> */}
+      </div>
+    );
+  }
+
   return (
     <div>
       <NavBar />
