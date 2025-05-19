@@ -19,13 +19,15 @@ function Home() {
     return (
       <div>
         <NavBar />
-        <div style={{ padding: "0 1rem" }}>
-          <Hero />
-          <About />
-          <HowItWorks />
-          <Faqs />
-        </div>
-        {/* <Footer /> */}
+        <Hero />
+        <About />
+        <HowItWorks />
+        <Connects />
+        <Trusted />
+        <Comparison />
+        <Faqs />
+        <CallToAction />
+        <Footer />
       </div>
     );
   }

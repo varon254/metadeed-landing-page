@@ -1,6 +1,7 @@
 import { Typography } from "@material-tailwind/react";
 import React from "react";
 import useIsMobile from "../context/useIsMobile";
+import { RequestDemo } from "../modal/requestDemo";
 
 function InsurerTab() {
   const isMobile = useIsMobile();
@@ -297,6 +298,27 @@ function InsurerTab() {
                 </li>
               </span>
             </Typography>
+          </div>
+        </div>
+      </div>
+      <div
+        className="flex items-center gap-3 mx-auto justify-center"
+        style={{
+          paddingBottom: "3rem",
+          paddingLeft: "4rem",
+          paddingRight: "4rem",
+        }}
+      >
+        <div
+          className="w-full p-10 flex items-center justify-center"
+          style={{
+            padding: "20px 40px",
+            textAlign: "left",
+            height: "138px",
+          }}
+        >
+          <div>
+            <RequestDemo />
           </div>
         </div>
       </div>

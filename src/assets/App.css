@@ -20,4 +20,18 @@ div.ui-list li {
     color: #5f5f5f;
 }
 
+.custom-label::before,
+.custom-label::after {
+  content: none !important;
+}
 
+/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox and IE */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}

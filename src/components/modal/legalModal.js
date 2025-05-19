@@ -19,7 +19,7 @@ export function LegalModal() {
         variant="text"
         size="sm"
         ripple={false}
-        className="hover:bg-transparent normal-case font-normal text-[16px] active:bg-transparent"
+        className="hover:bg-transparent normal-case font-normal text-[16px] active:bg-transparent lg:h-11 h-7"
         onClick={handleOpen}
       >
         <span>Legal Disclaimer</span>

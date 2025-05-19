@@ -8,7 +8,7 @@ import intergration from "../assets/media/integration-ndi.webp";
 function BuiltIn() {
   return (
     <div>
-      <div className="w-full lg:p-8 px-4 flex items-center justify-center min-h-[80vh]">
+      <div className="w-full lg:p-8 px-4 flex items-center justify-center">
         {/* We build in UAE Section */}
         <div className="w-full lg:px-6 lg:pr-14 pt-5">
           <h1

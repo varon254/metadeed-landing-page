@@ -1,30 +1,49 @@
 import { Button } from "@material-tailwind/react";
 import React from "react";
+import { RequestDemo } from "./modal/requestDemo";
+import useIsMobile from "./context/useIsMobile";
 
 function CallToAction() {
+  const isMobile = useIsMobile();
+
+  if (isMobile) {
+    return (
+      <div className="px-5 py-14">
+        <div className="w-full">
+          <h3 className="text-[28px] font-medium text-center pt-16">
+            The Future of Real Estate Is On-Chain
+          </h3>
+        </div>
+        <div className="w-full flex flex-col gap-4 pt-5 justify-center">
+          <RequestDemo />
+          <a href="/partner-with-us">
+            <Button
+              size="lg"
+              className="normal-case font-medium rounded-md py-3.5 h-[60px] w-full bg-black text-[18px]"
+            >
+              <h3>Partner with us</h3>
+            </Button>
+          </a>
+        </div>
+      </div>
+    );
+  }
   return (
-    <div style={{ marginTop: "10rem", marginBottom: "3rem" }}>
-      <div className="w-full flex gap-4 mt-4 justify-center">
-        <a href="/request-a-demo">
-          <Button
-            size="lg"
-            variant="outlined"
-            className="normal-case font-medium font-grotesk py-3 w-[250px] rounded-md border-2"
-            style={{ width: "270px", height: "60px", fontSize: "18px" }}
-          >
-            <h3>Request a Demo</h3>
-          </Button>
-        </a>
+    <div className="mt-8 mb-8">
+      <div className="w-full lg:p-8 px-4 flex items-center justify-center">
+        {/* Call to action By Section */}
+        <div className="w-full lg:px-6 lg:pr-14">
+          <h3 className="text-[48px] font-bold text-center pt-16">
+            The Future of Real Estate Is On-Chain
+          </h3>
+        </div>
+      </div>
+      <div className="w-full flex gap-4 mt-1 justify-center">
+        <RequestDemo />
         <a href="/partner-with-us">
           <Button
             size="lg"
-            className="normal-case font-medium w-[250px] rounded-md py-3.5"
-            style={{
-              width: "270px",
-              backgroundColor: "#000",
-              height: "60px",
-              fontSize: "18px",
-            }}
+            className="normal-case font-medium rounded-md py-3.5 h-[60px] w-[270px] bg-black text-[18px]"
           >
             <h3>Partner with us</h3>
           </Button>

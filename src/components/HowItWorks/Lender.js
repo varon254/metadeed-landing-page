@@ -1,6 +1,7 @@
-import { Button, Typography } from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
 import React from "react";
 import useIsMobile from "../context/useIsMobile";
+import { RequestDemo } from "../modal/requestDemo";
 
 function LenderTab() {
   const isMobile = useIsMobile();
@@ -234,16 +235,7 @@ function LenderTab() {
           }}
         >
           <div>
-            <a href="/request-demo">
-              <Button
-                size="lg"
-                variant="outlined"
-                className="normal-case font-medium font-grotesk py-3 w-[250px] rounded-md border-2"
-                style={{ width: "270px", height: "60px", fontSize: "18px" }}
-              >
-                <h3>Request a Demo</h3>
-              </Button>
-            </a>
+            <RequestDemo />
           </div>
         </div>
       </div>

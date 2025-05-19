@@ -1,4 +1,4 @@
-import { Button, Typography } from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
 import React from "react";
 import {
   ArrowTrendingUpIcon,
@@ -8,7 +8,6 @@ import {
   RocketLaunchIcon,
   ShieldCheckIcon,
 } from "@heroicons/react/24/outline";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import useIsMobile from "./context/useIsMobile";
 
 function About() {
@@ -17,24 +16,11 @@ function About() {
   if (isMobile) {
     return (
       <div
-        style={{ marginTop: "4rem" }}
+        style={{ marginTop: "4rem", padding: "0 1rem" }}
         id="about-us"
         className="relative scroll-offset"
       >
         <div>
-          <Typography className="font-bold">
-            <h1
-              style={{
-                fontSize: "24px",
-                lineHeight: "1.2",
-                marginTop: "1.8rem",
-                textAlign: "center",
-                color: "#874fa8",
-              }}
-            >
-              ON-CHAIN COMPLIANT
-            </h1>
-          </Typography>
           <Typography className="font-bold text-center">
             <h1
               style={{
@@ -45,9 +31,21 @@ function About() {
               MetaDeed ALL
             </h1>
           </Typography>
+          <Typography className="font-bold">
+            <h1
+              style={{
+                fontSize: "28px",
+                lineHeight: "1.2",
+                textAlign: "center",
+                color: "#000",
+              }}
+            >
+              ON-CHAIN COMPLIANT
+            </h1>
+          </Typography>
           <Typography
-            className="text-[16px] font-inter font-bold my-3 leading-relaxed text-center"
-            style={{ padding: "1rem 0" }}
+            className="text-[16px] font-inter font-normal my-3 leading-relaxed text-center"
+            style={{ padding: "0.5rem 0" }}
           >
             MetaDeed turns property into on-chain assets you can verify,
             finance, and own—instantly.
@@ -84,20 +82,6 @@ function About() {
                 regulator-verified proofs on-chain.
               </span>
             </Typography>
-            <a href="/learn-more">
-              <Button
-                variant="text"
-                className="normal-case font-medium flex font-inter gap-1 hover:bg-transparent hover:gap-2 items-center"
-              >
-                <span style={{ fontSize: "14px", color: "#874FA8" }}>
-                  Learn More
-                </span>{" "}
-                <ArrowRightIcon
-                  className="w-4 h-4"
-                  style={{ color: "#874FA8" }}
-                />
-              </Button>
-            </a>
           </div>
           <div
             className="w-full rounded-xl flex flex-col items-center gap-3"
@@ -129,20 +113,6 @@ function About() {
                 Morpho, and UniSwap.
               </span>
             </Typography>
-            <a href="/learn-more">
-              <Button
-                variant="text"
-                className="normal-case font-medium flex font-inter gap-1 hover:bg-transparent hover:gap-2 items-center"
-              >
-                <span style={{ fontSize: "14px", color: "#874FA8" }}>
-                  Learn More
-                </span>{" "}
-                <ArrowRightIcon
-                  className="w-4 h-4"
-                  style={{ color: "#874FA8" }}
-                />
-              </Button>
-            </a>
           </div>
           <div
             className="w-full rounded-xl flex flex-col items-center gap-3"
@@ -174,20 +144,6 @@ function About() {
                 funding, insurance issuance, and ownership transfer.
               </span>
             </Typography>
-            <a href="/learn-more">
-              <Button
-                variant="text"
-                className="normal-case font-medium flex font-inter gap-1 hover:bg-transparent hover:gap-2 items-center"
-              >
-                <span style={{ fontSize: "14px", color: "#874FA8" }}>
-                  Learn More
-                </span>{" "}
-                <ArrowRightIcon
-                  className="w-4 h-4"
-                  style={{ color: "#874FA8" }}
-                />
-              </Button>
-            </a>
           </div>
           <div
             className="w-full rounded-xl flex flex-col items-center gap-3"
@@ -219,20 +175,6 @@ function About() {
                 on-chain assets.
               </span>
             </Typography>
-            <a href="/learn-more">
-              <Button
-                variant="text"
-                className="normal-case font-medium flex font-inter gap-1 hover:bg-transparent hover:gap-2 items-center"
-              >
-                <span style={{ fontSize: "14px", color: "#874FA8" }}>
-                  Learn More
-                </span>{" "}
-                <ArrowRightIcon
-                  className="w-4 h-4"
-                  style={{ color: "#874FA8" }}
-                />
-              </Button>
-            </a>
           </div>
           <div
             className="w-full rounded-xl flex flex-col items-center gap-3"
@@ -263,20 +205,6 @@ function About() {
                 ownership, compliance, and smart contract settlement.
               </span>
             </Typography>
-            <a href="/learn-more">
-              <Button
-                variant="text"
-                className="normal-case font-medium flex font-inter gap-1 hover:bg-transparent hover:gap-2 items-center"
-              >
-                <span style={{ fontSize: "14px", color: "#874FA8" }}>
-                  Learn More
-                </span>{" "}
-                <ArrowRightIcon
-                  className="w-4 h-4"
-                  style={{ color: "#874FA8" }}
-                />
-              </Button>
-            </a>
           </div>
           <div
             className="w-full rounded-xl flex flex-col items-center gap-3"
@@ -307,20 +235,6 @@ function About() {
                 by EAS attestations.
               </span>
             </Typography>
-            <a href="/learn-more">
-              <Button
-                variant="text"
-                className="normal-case font-medium flex font-inter gap-1 hover:bg-transparent hover:gap-2 items-center"
-              >
-                <span style={{ fontSize: "14px", color: "#874FA8" }}>
-                  Learn More
-                </span>{" "}
-                <ArrowRightIcon
-                  className="w-4 h-4"
-                  style={{ color: "#874FA8" }}
-                />
-              </Button>
-            </a>
           </div>
         </div>
       </div>
@@ -328,30 +242,13 @@ function About() {
   }
 
   return (
-    <div
-      style={{ marginTop: "4rem" }}
-      id="about-us"
-      className="relative scroll-offset"
-    >
-      <div className="w-full lg:p-8 px-4 flex items-start justify-between min-h-[80vh]">
-        <div
-          className="lg:w-[70%] w-2/3 lg:px-6 lg:pr-14 pt-5 pl-4"
-          style={{ paddingLeft: "5rem" }}
-        >
-          <Typography className="font-bold">
-            <h1
-              style={{
-                fontSize: "96px",
-                marginBottom: "-1rem",
-              }}
-            >
-              MetaDeed ALL
-            </h1>
+    <div id="about-us" className="relative scroll-offset mt-12">
+      <div className="w-full lg:p-8 px-4 flex items-start justify-between">
+        <div className="lg:w-[70%] w-2/3 lg:px-6 lg:pr-14 pt-5 pl-24">
+          <Typography className="font-bold -mt-4 text-[96px]">
+            <h1>MetaDeed ALL</h1>
           </Typography>
-          <Typography
-            className="text-[16px] font-inter font-bold mr-1 mb-3 leading-relaxed"
-            style={{ paddingBottom: "1.5rem" }}
-          >
+          <Typography className="text-[16px] font-inter font-bold mr-1 mb-6 leading-relaxed">
             MetaDeed turns property into on-chain assets you can verify,
             <br />
             finance, and own—instantly.
@@ -373,10 +270,7 @@ function About() {
           </Typography>
         </div>
       </div>
-      <div
-        className="flex items-center justify-between gap-4"
-        style={{ paddingTop: "3rem" }}
-      >
+      <div className="flex items-center justify-between gap-4">
         <div
           className="w-1/3 rounded-xl p-10 flex flex-col items-center gap-3"
           style={{
@@ -403,20 +297,6 @@ function About() {
               regulator-verified proofs on-chain.
             </span>
           </Typography>
-          <a href="/learn-more">
-            <Button
-              variant="text"
-              className="normal-case font-medium flex font-inter gap-1 hover:bg-transparent hover:gap-2 items-center"
-            >
-              <span style={{ fontSize: "14px", color: "#874FA8" }}>
-                Learn More
-              </span>{" "}
-              <ArrowRightIcon
-                className="w-4 h-4"
-                style={{ color: "#874FA8" }}
-              />
-            </Button>
-          </a>
         </div>
 
         <div
@@ -448,20 +328,6 @@ function About() {
               Morpho, and UniSwap.
             </span>
           </Typography>
-          <a href="/learn-more">
-            <Button
-              variant="text"
-              className="normal-case font-medium flex font-inter gap-1 hover:bg-transparent hover:gap-2 items-center"
-            >
-              <span style={{ fontSize: "14px", color: "#874FA8" }}>
-                Learn More
-              </span>{" "}
-              <ArrowRightIcon
-                className="w-4 h-4"
-                style={{ color: "#874FA8" }}
-              />
-            </Button>
-          </a>
         </div>
 
         <div
@@ -493,20 +359,6 @@ function About() {
               funding, insurance issuance, and ownership transfer.
             </span>
           </Typography>
-          <a href="/learn-more">
-            <Button
-              variant="text"
-              className="normal-case font-medium flex font-inter gap-1 hover:bg-transparent hover:gap-2 items-center"
-            >
-              <span style={{ fontSize: "14px", color: "#874FA8" }}>
-                Learn More
-              </span>{" "}
-              <ArrowRightIcon
-                className="w-4 h-4"
-                style={{ color: "#874FA8" }}
-              />
-            </Button>
-          </a>
         </div>
       </div>
 
@@ -542,20 +394,6 @@ function About() {
               yield streams through compliant, collateralized, on-chain assets.
             </span>
           </Typography>
-          <a href="/learn-more">
-            <Button
-              variant="text"
-              className="normal-case font-medium flex font-inter gap-1 hover:bg-transparent hover:gap-2 items-center"
-            >
-              <span style={{ fontSize: "14px", color: "#874FA8" }}>
-                Learn More
-              </span>{" "}
-              <ArrowRightIcon
-                className="w-4 h-4"
-                style={{ color: "#874FA8" }}
-              />
-            </Button>
-          </a>
         </div>
 
         <div
@@ -586,20 +424,6 @@ function About() {
               ownership, compliance, and smart contract settlement.
             </span>
           </Typography>
-          <a href="/learn-more">
-            <Button
-              variant="text"
-              className="normal-case font-medium flex font-inter gap-1 hover:bg-transparent hover:gap-2 items-center"
-            >
-              <span style={{ fontSize: "14px", color: "#874FA8" }}>
-                Learn More
-              </span>{" "}
-              <ArrowRightIcon
-                className="w-4 h-4"
-                style={{ color: "#874FA8" }}
-              />
-            </Button>
-          </a>
         </div>
 
         <div
@@ -630,20 +454,6 @@ function About() {
               attestations.
             </span>
           </Typography>
-          <a href="/learn-more">
-            <Button
-              variant="text"
-              className="normal-case font-medium flex font-inter gap-1 hover:bg-transparent hover:gap-2 items-center"
-            >
-              <span style={{ fontSize: "14px", color: "#874FA8" }}>
-                Learn More
-              </span>{" "}
-              <ArrowRightIcon
-                className="w-4 h-4"
-                style={{ color: "#874FA8" }}
-              />
-            </Button>
-          </a>
         </div>
       </div>
     </div>

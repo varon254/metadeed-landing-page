@@ -20,17 +20,17 @@ function NavBar() {
           style={{ maxWidth: "85rem", margin: "0 auto" }}
         >
           {/* Left: Logo */}
-          <div className="flex items-center gap-2 w-1/3 show-on-lg">
-            <img className="h-10 max-w-14" src={logo} alt="MetaDeed" />
+          <div className="flex items-center gap-2 w-1/4 show-on-lg">
+            <img className="h-10 max-w-40" src={logo} alt="MetaDeed" />
           </div>
 
           {/* Left: Logo */}
           <div className="flex items-center gap-2 w-1/2 hide-on-lg">
-            <img className="h-10 max-w-14" src={logo} alt="MetaDeed" />
+            <img className="h-10 max-w-40" src={logo} alt="MetaDeed" />
           </div>
 
           {/* Center: Menu */}
-          <div className="justify-center gap-6 lg:w-1/3 flex show-on-lg">
+          <div className="justify-center gap-6 lg:w-2/4 flex show-on-lg">
             <a href="#about-us">
               <Button
                 variant="text"
@@ -74,7 +74,7 @@ function NavBar() {
           </div>
 
           {/* Right: CTA Button */}
-          <div className="justify-end w-1/3 flex show-on-lg">
+          <div className="justify-end w-1/4 flex show-on-lg">
             <DialogWithForm />
           </div>
 
@@ -97,7 +97,7 @@ function NavBar() {
           onClose={toggleDrawer}
           overlay={false}
           transition={{ type: "tween", duration: 0.5 }}
-          className="p-4 bg-white text-black"
+          className="p-4 bg-white text-black !max-h-[300px] -top-4"
         >
           <div className="mb-6">
             <div className="flex flex-col gap-4 mt-6 w-full">
