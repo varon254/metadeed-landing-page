@@ -68,10 +68,7 @@ export function LongDialog() {
         </DialogBody>
         <DialogFooter className="space-x-2">
           <Button variant="text" color="blue-gray" onClick={handleOpen}>
-            cancel
-          </Button>
-          <Button variant="gradient" color="green" onClick={handleOpen}>
-            confirm
+            close
           </Button>
         </DialogFooter>
       </Dialog>

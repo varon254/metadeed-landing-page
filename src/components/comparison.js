@@ -103,7 +103,7 @@ function Comparison() {
         <div className="mb-16">
           <div className="w-full">
             <div className="w-full flex items-center h-[77px] rounded-xl border border-[#874FA8] justify-center shadow-customPurple">
-              <Typography className="font-medium text-[28px] text-black text-center font-grotesk">
+              <Typography className="font-medium text-[28px] text-[#151314] text-center font-grotesk">
                 Traditional Real Estate
               </Typography>
             </div>
@@ -138,7 +138,7 @@ function Comparison() {
               }}
             >
               <div className="w-full flex items-center h-[77px] rounded-xl border border-[#874FA8] justify-center shadow-customPurple bg-white">
-                <Typography className="font-medium text-[28px] text-black text-center font-grotesk">
+                <Typography className="font-medium text-[28px] text-[#151314] text-center font-grotesk">
                   Feature
                 </Typography>
               </div>
@@ -170,7 +170,7 @@ function Comparison() {
           </div>
           <div className="w-full pt-8">
             <div className="w-full flex items-center h-[77px] rounded-xl border border-[#874FA8] justify-center shadow-customPurple">
-              <Typography className="font-medium text-[28px] text-black text-center font-grotesk">
+              <Typography className="font-medium text-[28px] text-[#151314] text-center font-grotesk">
                 Powered by MetaDeed
               </Typography>
             </div>
@@ -242,7 +242,7 @@ function Comparison() {
       <div className="flex items-start mx-auto justify-center gap-5 py-4 px-4">
         <div className="w-full">
           <div className="w-full flex items-center h-[77px] rounded-xl border border-[#874FA8] justify-center shadow-customPurple">
-            <Typography className="font-medium text-[28px] text-black text-center font-grotesk">
+            <Typography className="font-medium text-[28px] text-[#151314] text-center font-grotesk">
               Traditional Real Estate
             </Typography>
           </div>
@@ -270,7 +270,7 @@ function Comparison() {
         </div>
         <div className="w-full">
           <div className="w-full flex items-center h-[77px] rounded-xl border border-[#874FA8] justify-center shadow-customPurple">
-            <Typography className="font-medium text-[28px] text-black text-center font-grotesk">
+            <Typography className="font-medium text-[28px] text-[#151314] text-center font-grotesk">
               Feature
             </Typography>
           </div>
@@ -298,7 +298,7 @@ function Comparison() {
         </div>
         <div className="w-full">
           <div className="w-full flex items-center h-[77px] rounded-xl border border-[#874FA8] justify-center shadow-customPurple">
-            <Typography className="font-medium text-[28px] text-black text-center font-grotesk">
+            <Typography className="font-medium text-[28px] text-[#151314] text-center font-grotesk">
               Powered by MetaDeed
             </Typography>
           </div>

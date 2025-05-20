@@ -32,7 +32,7 @@ function Connects() {
 
   if (isMobile) {
     return (
-      <div className="px-4">
+      <div className="px-4 pt-16" id="use-cases">
         {/* MetaDeed Connects Section */}
         <div className="w-full pt-5">
           <h1 className="text-[48px] font-bold text-center leading-tight -mb-4">
@@ -51,11 +51,11 @@ function Connects() {
                 boxShadow: "4px 10px 0 0 rgba(196, 169, 210, 0.5)",
               }}
             >
-              <Typography className="font-medium text-[22px] text-black">
+              <Typography className="font-medium text-[22px] text-[#151314]">
                 <h3>{title}</h3>
               </Typography>
               <Typography>
-                <span className="text-center text-black leading-5 text-sm">
+                <span className="text-center text-[#151314] leading-5 text-sm">
                   <p>{description}</p>
                 </span>
               </Typography>
@@ -67,7 +67,7 @@ function Connects() {
   }
 
   return (
-    <div>
+    <div id="use-cases">
       <div className="w-full lg:p-8 px-4 flex items-center justify-center">
         {/* MetaDeed Connects Section */}
         <div className="w-full lg:px-6 lg:pr-14 pt-5">
@@ -89,10 +89,10 @@ function Connects() {
               boxShadow: "4px 10px 0 0 rgba(196, 169, 210, 0.5)",
             }}
           >
-            <Typography className="font-medium text-[22px] text-black">
+            <Typography className="font-medium text-[22px] text-[#151314]">
               <h3>Buyers</h3>
             </Typography>
-            <Typography className="text-sm text-black font-inter">
+            <Typography className="text-sm text-[#151314] font-inter">
               Own property with full transparency and on-chain identity.
             </Typography>
           </div>
@@ -102,10 +102,10 @@ function Connects() {
               boxShadow: "4px 10px 0 0 rgba(196, 169, 210, 0.5)",
             }}
           >
-            <Typography className="font-medium text-[22px] text-black">
+            <Typography className="font-medium text-[22px] text-[#151314]">
               <h3>Sellers</h3>
             </Typography>
-            <Typography className="text-sm text-black font-inter">
+            <Typography className="text-sm text-[#151314] font-inter">
               Get liquidity and global visibility through Digital Dirham.
             </Typography>
           </div>
@@ -117,10 +117,10 @@ function Connects() {
               boxShadow: "4px 10px 0 0 rgba(196, 169, 210, 0.5)",
             }}
           >
-            <Typography className="font-medium text-[22px] text-black">
+            <Typography className="font-medium text-[22px] text-[#151314]">
               <h3>Lenders</h3>
             </Typography>
-            <Typography className="text-sm text-black font-inter">
+            <Typography className="text-sm text-[#151314] font-inter">
               Invest in real estate-backed yields with real compliance.
             </Typography>
           </div>
@@ -130,10 +130,10 @@ function Connects() {
               boxShadow: "4px 10px 0 0 rgba(196, 169, 210, 0.5)",
             }}
           >
-            <Typography className="font-medium text-[22px] text-black">
+            <Typography className="font-medium text-[22px] text-[#151314]">
               <h3>Insurers</h3>
             </Typography>
-            <Typography className="text-sm text-black font-inter">
+            <Typography className="text-sm text-[#151314] font-inter">
               Mitigate lender risk with on-chain mortgage insurance.
             </Typography>
           </div>
@@ -145,10 +145,10 @@ function Connects() {
               boxShadow: "4px 10px 0 0 rgba(196, 169, 210, 0.5)",
             }}
           >
-            <Typography className="font-medium text-[22px] text-black">
+            <Typography className="font-medium text-[22px] text-[#151314]">
               <h3>Governments</h3>
             </Typography>
-            <Typography className="text-sm text-black font-inter">
+            <Typography className="text-sm text-[#151314] font-inter">
               Real-time regulation, global reach, and seamless settlement in
               Digital Dirham.
             </Typography>

@@ -1,7 +1,7 @@
-import { Button } from "@material-tailwind/react";
 import React from "react";
 import { RequestDemo } from "./modal/requestDemo";
 import useIsMobile from "./context/useIsMobile";
+import { PartnershipPopover } from "./modal/partnerWithUs";
 
 function CallToAction() {
   const isMobile = useIsMobile();
@@ -14,16 +14,9 @@ function CallToAction() {
             The Future of Real Estate Is On-Chain
           </h3>
         </div>
-        <div className="w-full flex flex-col gap-4 pt-5 justify-center">
+        <div className="w-full flex flex-col pt-5 justify-center">
           <RequestDemo />
-          <a href="/partner-with-us">
-            <Button
-              size="lg"
-              className="normal-case font-medium rounded-md py-3.5 h-[60px] w-full bg-black text-[18px]"
-            >
-              <h3>Partner with us</h3>
-            </Button>
-          </a>
+          <PartnershipPopover />
         </div>
       </div>
     );
@@ -40,14 +33,7 @@ function CallToAction() {
       </div>
       <div className="w-full flex gap-4 mt-1 justify-center">
         <RequestDemo />
-        <a href="/partner-with-us">
-          <Button
-            size="lg"
-            className="normal-case font-medium rounded-md py-3.5 h-[60px] w-[270px] bg-black text-[18px]"
-          >
-            <h3>Partner with us</h3>
-          </Button>
-        </a>
+        <PartnershipPopover />
       </div>
     </div>
   );

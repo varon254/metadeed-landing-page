@@ -91,11 +91,7 @@ function HowItWorks() {
 
   if (isMobile) {
     return (
-      <div
-        id="how-it-works"
-        className="relative scroll-offset"
-        style={{ padding: "0 1rem" }}
-      >
+      <div id="how-it-works" className="relative scroll-smooth px-4 pt-20">
         <div className="my-4">
           <h1 className="font-bold text-5xl text-center">How it works?</h1>
         </div>
@@ -186,7 +182,7 @@ function HowItWorks() {
             </AccordionBody>
           </Accordion>
         </div>
-        <div className="flex justify-center" style={{ margin: "2rem 0" }}>
+        <div className="flex justify-center my-8">
           <RequestDemo />
         </div>
       </div>
@@ -194,18 +190,11 @@ function HowItWorks() {
   }
 
   return (
-    <div id="how-it-works" className="relative scroll-offset">
+    <div id="how-it-works" className="relative scroll-smooth">
       <div className="w-full lg:p-8 px-4 flex items-center justify-center">
         {/* How it works Section */}
         <div className="w-full lg:px-6 lg:pr-14 pt-5">
-          <h1
-            className="text-[96px] font-bold"
-            style={{
-              fontSize: "96px",
-              textAlign: "center",
-              marginBottom: "3rem",
-            }}
-          >
+          <h1 className="text-[96px] font-bold text-center mt-12">
             How it works?
           </h1>
         </div>
@@ -213,14 +202,9 @@ function HowItWorks() {
       <div>
         <div className="mb-10">
           <Tabs value={activeTab} onChange={(val) => setActiveTab(val)}>
-            <div className="w-full" style={{ padding: "0 10rem" }}>
+            <div className="w-full px-40">
               <TabsHeader
-                className="w-full"
-                style={{
-                  border: "1px solid #874FA8",
-                  backgroundColor: "transparent",
-                  padding: "0.75rem",
-                }}
+                className="w-full border border-[#874FA8] bg-transparent p-3"
                 indicatorProps={{
                   style: {
                     backgroundColor: "#70418B",

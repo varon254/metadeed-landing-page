@@ -24,6 +24,7 @@ function Home() {
         <HowItWorks />
         <Connects />
         <Trusted />
+        <BuiltIn />
         <Comparison />
         <Faqs />
         <CallToAction />
@@ -35,7 +36,7 @@ function Home() {
   return (
     <div>
       <NavBar />
-      <div style={{ maxWidth: "85rem", margin: "0 auto" }}>
+      <div className="max-w-[85rem] my-0 mx-auto">
         <Hero />
         <About />
         <HowItWorks />

@@ -6,8 +6,10 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import "../assets/NavBar.css";
 
 function NavBar() {
-  const [open, setOpen] = useState(false);
-  const toggleDrawer = () => setOpen(!open);
+  const [openTop, setOpenTop] = useState(false);
+
+  const openDrawerTop = () => setOpenTop(true);
+  const closeDrawerTop = () => setOpenTop(false);
 
   return (
     <React.Fragment>
@@ -15,10 +17,7 @@ function NavBar() {
         className="!sticky top-0 z-[999] bg-white shadow-none items-center"
         style={{ position: "sticky" }}
       >
-        <Navbar
-          className="mx-auto flex items-center justify-between px-4 py-4 shadow-none max-w-none bg-white"
-          style={{ maxWidth: "85rem", margin: "0 auto" }}
-        >
+        <Navbar className="mx-auto flex items-center justify-between px-4 py-4 shadow-none bg-white max-w-[85rem] my-0">
           {/* Left: Logo */}
           <div className="flex items-center gap-2 w-1/4 show-on-lg">
             <img className="h-10 max-w-40" src={logo} alt="MetaDeed" />
@@ -51,14 +50,24 @@ function NavBar() {
                 <span>How it Works</span>
               </Button>
             </a>
-            <a href="#partners">
+            <a href="#use-cases">
               <Button
                 variant="text"
                 size="sm"
                 ripple={false}
                 className="hover:bg-transparent normal-case font-normal text-[16px] active:bg-transparent"
               >
-                <span>Partners</span>
+                <span>Use Cases</span>
+              </Button>
+            </a>
+            <a href="#build-in-uae">
+              <Button
+                variant="text"
+                size="sm"
+                ripple={false}
+                className="hover:bg-transparent normal-case font-normal text-[16px] active:bg-transparent"
+              >
+                <span>Build in UAE</span>
               </Button>
             </a>
             <a href="#faqs">
@@ -80,68 +89,86 @@ function NavBar() {
 
           {/* Mobile Hamburger */}
           <div className="hide-on-lg">
-            <IconButton variant="text" onClick={toggleDrawer}>
-              {open ? (
+            {openTop ? (
+              <IconButton
+                variant="text"
+                onClick={closeDrawerTop}
+                className="lg:hidden"
+              >
                 <XMarkIcon className="h-6 w-6" />
-              ) : (
+              </IconButton>
+            ) : (
+              <IconButton
+                variant="text"
+                onClick={openDrawerTop}
+                className="lg:hidden"
+              >
                 <Bars3Icon className="h-6 w-6" />
-              )}
-            </IconButton>
+              </IconButton>
+            )}
           </div>
         </Navbar>
-
-        {/* Mobile Drawer Menu */}
-        <Drawer
-          open={open}
-          placement="top"
-          onClose={toggleDrawer}
-          overlay={false}
-          transition={{ type: "tween", duration: 0.5 }}
-          className="p-4 bg-white text-black !max-h-[300px] -top-4"
-        >
-          <div className="mb-6">
-            <div className="flex flex-col gap-4 mt-6 w-full">
-              <a href="#about-us" onClick={toggleDrawer}>
-                <Button
-                  fullWidth
-                  variant="text"
-                  className="normal-case text-left"
-                >
-                  About Us
-                </Button>
-              </a>
-              <a href="#how-it-works" onClick={toggleDrawer}>
-                <Button
-                  fullWidth
-                  variant="text"
-                  className="normal-case text-left"
-                >
-                  How it Works
-                </Button>
-              </a>
-              <a href="#partners" onClick={toggleDrawer}>
-                <Button
-                  fullWidth
-                  variant="text"
-                  className="normal-case text-left"
-                >
-                  Partners
-                </Button>
-              </a>
-              <a href="#faqs" onClick={toggleDrawer}>
-                <Button
-                  fullWidth
-                  variant="text"
-                  className="normal-case text-left"
-                >
-                  Q&A
-                </Button>
-              </a>
-              <DialogWithForm />
-            </div>
-          </div>
-        </Drawer>
       </div>
+      {/* Mobile Drawer Menu */}
+      <Drawer
+        placement="top"
+        open={openTop}
+        onClose={closeDrawerTop}
+        overlay={false}
+        transition={{ type: "tween", duration: 0.5 }}
+        className="p-4 bg-white text-[#151314] !max-h-[570px] -top-52 z-[998] shadow-sm"
+      >
+        <div className="bg-white pb-4">
+          <div className="flex flex-col gap-1 mt-[17rem] w-full">
+            <a href="#about-us" onClick={closeDrawerTop}>
+              <Button
+                fullWidth
+                variant="text"
+                className="normal-case text-left"
+              >
+                About Us
+              </Button>
+            </a>
+            <a href="#how-it-works" onClick={closeDrawerTop}>
+              <Button
+                fullWidth
+                variant="text"
+                className="normal-case text-left"
+              >
+                How it Works
+              </Button>
+            </a>
+            <a href="#use-cases" onClick={closeDrawerTop}>
+              <Button
+                fullWidth
+                variant="text"
+                className="normal-case text-left"
+              >
+                Use Cases
+              </Button>
+            </a>
+            <a href="#build-in-uae" onClick={closeDrawerTop}>
+              <Button
+                fullWidth
+                variant="text"
+                className="normal-case text-left"
+              >
+                Build in UAE
+              </Button>
+            </a>
+            <a href="#faqs" onClick={closeDrawerTop}>
+              <Button
+                fullWidth
+                variant="text"
+                className="normal-case text-left"
+              >
+                Q&A
+              </Button>
+            </a>
+            <DialogWithForm />
+          </div>
+        </div>
+      </Drawer>
     </React.Fragment>
   );
 }

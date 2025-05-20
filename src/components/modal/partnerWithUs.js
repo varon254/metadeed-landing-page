@@ -13,13 +13,7 @@ export function PartnershipPopover() {
       <PopoverHandler>
         <Button
           size="lg"
-          className="normal-case font-medium w-[250px] rounded-md py-3.5"
-          style={{
-            width: "270px",
-            backgroundColor: "#000",
-            height: "60px",
-            fontSize: "18px",
-          }}
+          className="normal-case font-medium  rounded-md py-3.5 bg-[#151314] lg:w-[270px] w-full h-[60px] lg:my-0 my-2 text-[18px]"
         >
           <h3>Partner with us</h3>
         </Button>
