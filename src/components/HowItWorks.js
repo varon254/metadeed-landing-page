@@ -23,6 +23,7 @@ import {
   ScaleIcon,
 } from "@heroicons/react/24/outline";
 import { RequestDemo } from "./modal/requestDemo";
+import useIsTablet from "./context/useIsTablet";
 
 function Icon({ id, open }) {
   return (
@@ -47,6 +48,8 @@ function Icon({ id, open }) {
 
 function HowItWorks() {
   const isMobile = useIsMobile();
+  const isTablet = useIsTablet();
+
   const data = [
     {
       label: "Buyer",
@@ -91,7 +94,7 @@ function HowItWorks() {
 
   if (isMobile) {
     return (
-      <div id="how-it-works" className="relative scroll-smooth px-4 pt-20">
+      <div id="how-it-works" className="relative px-4 pt-20">
         <div className="my-4">
           <h1 className="font-bold text-5xl text-center">How it works?</h1>
         </div>
@@ -189,8 +192,67 @@ function HowItWorks() {
     );
   }
 
+  if (isTablet) {
+    return (
+      <div id="how-it-works" className="relative px-5">
+        <div className="w-full lg:p-8 px-4 flex items-center justify-center">
+          {/* How it works Section */}
+          <div className="w-full lg:px-6 lg:pr-14 pt-5">
+            <h1 className="text-[96px] font-bold text-center mt-12">
+              How it works?
+            </h1>
+          </div>
+        </div>
+        <div className="pb-8 flex justify-center">
+          <div className="w-[270px]">
+            <RequestDemo />
+          </div>
+        </div>
+        <div>
+          <div className="mb-10">
+            <Tabs value={activeTab} onChange={(val) => setActiveTab(val)}>
+              <div className="w-full px-10">
+                <TabsHeader
+                  className="w-full border border-[#874FA8] bg-transparent p-3"
+                  indicatorProps={{
+                    style: {
+                      backgroundColor: "#70418B",
+                      height: "100%",
+                    },
+                  }}
+                >
+                  {data.map(({ label, value }) => (
+                    <Tab
+                      key={value}
+                      value={value}
+                      onClick={() => setActiveTab(value)}
+                      style={{
+                        color: activeTab === value ? "white" : "black",
+                        zIndex: 1, // Makes sure text stays above the red pill
+                      }}
+                    >
+                      <h3>{label}</h3>
+                    </Tab>
+                  ))}
+                </TabsHeader>
+              </div>
+
+              <TabsBody>
+                {data.map(({ value, component }) => (
+                  <TabPanel key={value} value={value}>
+                    {component}
+                  </TabPanel>
+                ))}
+              </TabsBody>
+            </Tabs>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div id="how-it-works" className="relative scroll-smooth">
+    <div id="how-it-works" className="relative max-w-[85rem] my-0 mx-auto">
       <div className="w-full lg:p-8 px-4 flex items-center justify-center">
         {/* How it works Section */}
         <div className="w-full lg:px-6 lg:pr-14 pt-5">
@@ -198,6 +260,9 @@ function HowItWorks() {
             How it works?
           </h1>
         </div>
+      </div>
+      <div className="pb-8 flex justify-center">
+        <RequestDemo />
       </div>
       <div>
         <div className="mb-10">

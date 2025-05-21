@@ -11,6 +11,21 @@ function NavBar() {
   const openDrawerTop = () => setOpenTop(true);
   const closeDrawerTop = () => setOpenTop(false);
 
+  const scrollToId = (id) => {
+    // Temporarily enable smooth scroll
+    document.documentElement.style.scrollBehavior = "smooth";
+
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+
+    // Remove smooth scroll after a short timeout to avoid affecting other things
+    setTimeout(() => {
+      document.documentElement.style.scrollBehavior = "auto";
+    }, 1000);
+  };
+
   return (
     <React.Fragment>
       <div
@@ -19,22 +34,26 @@ function NavBar() {
       >
         <Navbar className="mx-auto flex items-center justify-between px-4 py-4 shadow-none bg-white max-w-[85rem] my-0">
           {/* Left: Logo */}
-          <div className="flex items-center gap-2 w-1/4 show-on-lg">
+          <div className="items-center gap-2 w-1/4 hidden lg:flex">
             <img className="h-10 max-w-40" src={logo} alt="MetaDeed" />
           </div>
 
           {/* Left: Logo */}
-          <div className="flex items-center gap-2 w-1/2 hide-on-lg">
+          <div className="flex items-center gap-2 w-1/2 lg:hidden">
             <img className="h-10 max-w-40" src={logo} alt="MetaDeed" />
           </div>
 
           {/* Center: Menu */}
-          <div className="justify-center gap-6 lg:w-2/4 flex show-on-lg">
+          <div className="justify-center gap-6 lg:w-2/4 hidden lg:flex">
             <a href="#about-us">
               <Button
                 variant="text"
                 size="sm"
                 ripple={false}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToId("about-us");
+                }}
                 className="hover:bg-transparent normal-case font-normal text-[16px] active:bg-transparent"
               >
                 <span>About Us</span>
@@ -45,6 +64,10 @@ function NavBar() {
                 variant="text"
                 size="sm"
                 ripple={false}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToId("how-it-works");
+                }}
                 className="hover:bg-transparent normal-case font-normal text-[16px] active:bg-transparent"
               >
                 <span>How it Works</span>
@@ -55,6 +78,10 @@ function NavBar() {
                 variant="text"
                 size="sm"
                 ripple={false}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToId("use-cases");
+                }}
                 className="hover:bg-transparent normal-case font-normal text-[16px] active:bg-transparent"
               >
                 <span>Use Cases</span>
@@ -65,6 +92,10 @@ function NavBar() {
                 variant="text"
                 size="sm"
                 ripple={false}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToId("build-in-uae");
+                }}
                 className="hover:bg-transparent normal-case font-normal text-[16px] active:bg-transparent"
               >
                 <span>Build in UAE</span>
@@ -75,6 +106,10 @@ function NavBar() {
                 variant="text"
                 size="sm"
                 ripple={false}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToId("faqs");
+                }}
                 className="hover:bg-transparent normal-case font-normal text-[16px] active:bg-transparent"
               >
                 <span>Q&A</span>
@@ -83,16 +118,16 @@ function NavBar() {
           </div>
 
           {/* Right: CTA Button */}
-          <div className="justify-end w-1/4 flex show-on-lg">
+          <div className="justify-end w-1/4 hidden lg:flex">
             <DialogWithForm />
           </div>
 
           {/* Mobile Hamburger */}
-          <div className="hide-on-lg">
+          <div className="lg:hidden">
             {openTop ? (
               <IconButton
                 variant="text"
-                onClick={closeDrawerTop}
+                onClick={!closeDrawerTop}
                 className="lg:hidden"
               >
                 <XMarkIcon className="h-6 w-6" />
@@ -115,8 +150,7 @@ function NavBar() {
         open={openTop}
         onClose={closeDrawerTop}
         overlay={false}
-        transition={{ type: "tween", duration: 0.5 }}
-        className="p-4 bg-white text-[#151314] !max-h-[570px] -top-52 z-[998] shadow-sm"
+        className="p-4 bg-white text-[#151314] !max-h-[570px] -top-52 z-[998] shadow-sm lg:hidden"
       >
         <div className="bg-white pb-4">
           <div className="flex flex-col gap-1 mt-[17rem] w-full">
@@ -124,6 +158,10 @@ function NavBar() {
               <Button
                 fullWidth
                 variant="text"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToId("about-us");
+                }}
                 className="normal-case text-left"
               >
                 About Us
@@ -133,6 +171,10 @@ function NavBar() {
               <Button
                 fullWidth
                 variant="text"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToId("how-it-works");
+                }}
                 className="normal-case text-left"
               >
                 How it Works
@@ -142,6 +184,10 @@ function NavBar() {
               <Button
                 fullWidth
                 variant="text"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToId("use-cases");
+                }}
                 className="normal-case text-left"
               >
                 Use Cases
@@ -151,6 +197,10 @@ function NavBar() {
               <Button
                 fullWidth
                 variant="text"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToId("build-in-uae");
+                }}
                 className="normal-case text-left"
               >
                 Build in UAE
@@ -160,6 +210,10 @@ function NavBar() {
               <Button
                 fullWidth
                 variant="text"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToId("faqs");
+                }}
                 className="normal-case text-left"
               >
                 Q&A

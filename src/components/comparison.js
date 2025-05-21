@@ -1,6 +1,7 @@
 import { Typography } from "@material-tailwind/react";
 import React from "react";
 import useIsMobile from "./context/useIsMobile";
+import useIsTablet from "./context/useIsTablet";
 
 const traditionalList = [
   {
@@ -85,6 +86,7 @@ const metaDeedList = [
 
 function Comparison() {
   const isMobile = useIsMobile();
+  const isTablet = useIsTablet();
 
   if (isMobile) {
     return (
@@ -200,8 +202,116 @@ function Comparison() {
       </div>
     );
   }
+
+  if (isTablet) {
+    return (
+      <div className="px-5">
+        <div className="w-full lg:p-8 px-4 flex items-center justify-center">
+          {/* Comparison Section */}
+          <div className="w-full lg:px-6 lg:pr-14 pt-5">
+            <h1 className="text-[72px] font-bold text-center mt-16 -mb-6">
+              Traditional Deals
+            </h1>
+            <h1 className="text-[36px] font-bold text-center text-[#874FA8]">
+              vs
+            </h1>
+            <h1 className="text-[72px] font-bold text-center -mt-1 mb-12 leading-[1]">
+              Tokenized Real Estate
+            </h1>
+          </div>
+        </div>
+        <div className="flex items-start mx-auto justify-center gap-5 py-4 px-4">
+          <div className="w-full">
+            <div className="w-full flex items-center h-[77px] rounded-xl border border-[#874FA8] justify-center shadow-customPurple">
+              <Typography className="font-medium text-[22px] text-[#151314] text-center font-grotesk">
+                Traditional Real Estate
+              </Typography>
+            </div>
+            <div className="ui-list mt-8 gap-5">
+              {traditionalList.map((item, index) => {
+                return (
+                  <li key={index} className="flex items-start gap-3 mt-6">
+                    <div className="max-h-[26px] rounded-full bg-[#FFF0FA] p-[5px]">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="#874FA8"
+                        class="bi bi-check-lg"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z" />
+                      </svg>
+                    </div>
+                    <span className="text-[14px]">{item.text}</span>
+                  </li>
+                );
+              })}
+            </div>
+          </div>
+          <div className="w-full">
+            <div className="w-full flex items-center h-[77px] rounded-xl border border-[#874FA8] justify-center shadow-customPurple">
+              <Typography className="font-medium text-[22px] text-[#151314] text-center font-grotesk">
+                Feature
+              </Typography>
+            </div>
+            <div className="ui-list mt-8 gap-5">
+              {featureList.map((item, index) => {
+                return (
+                  <li key={index} className="flex items-start gap-3 mb-7 pl-8">
+                    <div className="max-h-[26px] rounded-full bg-[#F2B0DC] p-[5px]">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="#874FA8"
+                        class="bi bi-check-lg"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z" />
+                      </svg>
+                    </div>
+                    <span className="text-[14px]">{item.text}</span>
+                  </li>
+                );
+              })}
+            </div>
+          </div>
+          <div className="w-full">
+            <div className="w-full flex items-center h-[77px] rounded-xl border border-[#874FA8] justify-center shadow-customPurple">
+              <Typography className="font-medium text-[22px] text-[#151314] text-center font-grotesk">
+                Powered by MetaDeed
+              </Typography>
+            </div>
+            <div className="ui-list mt-8 gap-5">
+              {metaDeedList.map((item, index) => {
+                return (
+                  <li key={index} className="flex items-start gap-3 mb-3">
+                    <div className="max-h-[26px] rounded-full bg-[#FFF0FA] p-[5px]">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="#874FA8"
+                        class="bi bi-check-lg"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z" />
+                      </svg>
+                    </div>
+                    <span className="text-[14px]">{item.text}</span>
+                  </li>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div>
+    <div className="max-w-[85rem] my-0 mx-auto">
       <div className="w-full lg:p-8 px-4 flex items-center justify-center">
         {/* Comparison Section */}
         <div className="w-full lg:px-6 lg:pr-14 pt-5">

@@ -10,43 +10,20 @@ import BuiltIn from "../components/builtIn";
 import Comparison from "../components/comparison";
 import Faqs from "../components/faqs";
 import CallToAction from "../components/callToAction";
-import useIsMobile from "../components/context/useIsMobile";
 
 function Home() {
-  const isMobile = useIsMobile();
-
-  if (isMobile) {
-    return (
-      <div>
-        <NavBar />
-        <Hero />
-        <About />
-        <HowItWorks />
-        <Connects />
-        <Trusted />
-        <BuiltIn />
-        <Comparison />
-        <Faqs />
-        <CallToAction />
-        <Footer />
-      </div>
-    );
-  }
-
   return (
     <div>
       <NavBar />
-      <div className="max-w-[85rem] my-0 mx-auto">
-        <Hero />
-        <About />
-        <HowItWorks />
-        <Connects />
-        <Trusted />
-        <BuiltIn />
-        <Comparison />
-        <Faqs />
-        <CallToAction />
-      </div>
+      <Hero />
+      <About />
+      <HowItWorks />
+      <Connects />
+      <Trusted />
+      <BuiltIn />
+      <Comparison />
+      <Faqs />
+      <CallToAction />
       <Footer />
     </div>
   );

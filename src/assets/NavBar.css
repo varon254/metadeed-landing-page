@@ -13,17 +13,3 @@
     display: flex !important;
   }
 }
-
-.drawer-height {
-  height: 400px;
-  max-height: 400px;
-  padding: 1rem; /* Tailwind p-4 = 16px */
-  background-color: white;
-  color: black;
-  transition: transform 300ms ease-in-out;
-  transform: translateY(-400px); /* Hidden state */
-}
-
-.drawer-height.open {
-    transform: translateY(0); /* Visible state */
-}

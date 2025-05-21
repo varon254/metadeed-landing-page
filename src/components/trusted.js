@@ -7,9 +7,11 @@ import devfolio from "../assets/media/devfolio.webp";
 import ceramic from "../assets/media/ceramic.webp";
 import ethglobal from "../assets/media/ethglobal.webp";
 import useIsMobile from "./context/useIsMobile";
+import useIsTablet from "./context/useIsTablet";
 
 function Trusted() {
   const isMobile = useIsMobile();
+  const isTablet = useIsTablet();
 
   const data = [
     {
@@ -44,7 +46,7 @@ function Trusted() {
 
   if (isMobile) {
     return (
-      <div id="partners" className="relative scroll-offset mt-2 mb-20">
+      <div id="partners" className="relative mt-2 mb-20">
         {/* Trusted By Section */}
         <div className="w-full pt-5">
           <h3 className="text-[36px] font-bold text-center pt-8 pb-12">
@@ -79,8 +81,34 @@ function Trusted() {
     );
   }
 
+  if (isTablet) {
+    return (
+      <div id="partners" className="relative px-5">
+        <div className="w-full lg:p-8 px-4 flex items-center justify-center">
+          {/* Trusted By Section */}
+          <div className="w-full lg:px-6 lg:pr-14 pt-5">
+            <h3 className="text-[48px] font-bold text-center mb-8 pt-12">
+              Trusted By
+            </h3>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-3 w-full">
+          {data.map(({ link, alt }, idx) => (
+            <div
+              key={idx}
+              className="rounded-lg flex items-center justify-center border border-[#874FA8] h-[70px] w-[180px]"
+            >
+              <img className="h-10 max-w-40" src={link} alt={alt} />
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div id="partners" className="relative scroll-offset">
+    <div id="partners" className="relative max-w-[85rem] my-0 mx-auto">
       <div className="w-full lg:p-8 px-4 flex items-center justify-center">
         {/* Trusted By Section */}
         <div className="w-full lg:px-6 lg:pr-14 pt-5">
