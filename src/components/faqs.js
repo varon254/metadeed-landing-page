@@ -119,8 +119,7 @@ function Faqs() {
   const visibleData = showAll ? data : data.slice(0, 4);
 
   const handleToggle = () => {
-    setShowAll((prev) => !prev);
-    setWasToggled(true); // indicate this was user-triggered
+    setShowAll(true);
   };
 
   useEffect(() => {
@@ -175,7 +174,7 @@ function Faqs() {
             </Accordion>
           ))}
 
-          {data.length > 4 && (
+          {data.length > 4 && !showAll && (
             <div className="text-center">
               <Button
                 size="lg"
@@ -183,7 +182,7 @@ function Faqs() {
                 className="normal-case font-medium font-grotesk py-3 lg:w-[270px] w-full rounded-md border-2 h-[60px] text-[18px] my-4 transition-colors duration-200"
                 onClick={handleToggle}
               >
-                <h3>{showAll ? "See less" : "See all"}</h3>
+                <h3>See all</h3>
               </Button>
             </div>
           )}
@@ -236,7 +235,7 @@ function Faqs() {
               </Accordion>
             ))}
 
-            {data.length > 4 && (
+            {data.length > 4 && !showAll && (
               <div className="text-center">
                 <Button
                   size="lg"
@@ -244,7 +243,7 @@ function Faqs() {
                   className="normal-case font-medium font-grotesk py-3 lg:w-[270px] md:w-[270px] w-full rounded-md border-2 h-[60px] text-[18px] my-4 transition-colors duration-200"
                   onClick={handleToggle}
                 >
-                  <h3>{showAll ? "See less" : "See all"}</h3>
+                  <h3>See all</h3>
                 </Button>
               </div>
             )}
@@ -297,7 +296,7 @@ function Faqs() {
             </Accordion>
           ))}
 
-          {data.length > 4 && (
+          {data.length > 4 && !showAll && (
             <div className="text-center">
               <Button
                 size="lg"
@@ -305,7 +304,7 @@ function Faqs() {
                 className="normal-case font-medium font-grotesk py-3 lg:w-[270px] w-full rounded-md border-2 h-[60px] text-[18px] my-4 transition-colors duration-200"
                 onClick={handleToggle}
               >
-                <h3>{showAll ? "See less" : "See all"}</h3>
+                <h3>See all</h3>
               </Button>
             </div>
           )}
