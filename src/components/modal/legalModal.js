@@ -29,7 +29,7 @@ export function LegalModal() {
           <DialogHeader>
             <h1>Legal Disclaimer</h1>
           </DialogHeader>
-          <DialogBody className="h-[70vh] overflow-scroll">
+          <DialogBody className="h-[70vh] overflow-auto">
             <Typography className="font-normal">
               <span>
                 I&apos;ve always had unwavering confidence in my abilities, and

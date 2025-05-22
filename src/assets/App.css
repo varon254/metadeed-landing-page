@@ -25,13 +25,30 @@ div.ui-list li {
   content: none !important;
 }
 
-/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
+/* For Webkit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 16px;  /* Thicker scrollbar */
+  height: 16px;
 }
 
-/* Hide scrollbar for Firefox and IE */
-.scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
+::-webkit-scrollbar-track {
+  background: transparent;  /* Optional: you can keep #f0f0f0 if preferred */
 }
+
+::-webkit-scrollbar-thumb {
+  background-color: #151314;
+  border-radius: 8px;
+  border: 3px solid transparent; /* Optional: gives padding effect */
+  background-clip: content-box;  /* Ensures the padding effect is visible */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #222; /* Darker black on hover */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thick; /* Changed from thin to thick */
+  scrollbar-color: black transparent; /* Black thumb, transparent track */
+}
+

@@ -28,7 +28,7 @@ export function LongDialog() {
         <DialogHeader>
           <h1>Terms & Conditions</h1>
         </DialogHeader>
-        <DialogBody className="h-[70vh] overflow-scroll">
+        <DialogBody className="h-[70vh] overflow-auto">
           <Typography className="font-normal">
             <span>
               I&apos;ve always had unwavering confidence in my abilities, and I

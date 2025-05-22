@@ -12,14 +12,14 @@ function App() {
     let loadedCount = 0;
 
     if (images.length === 0) {
-      setTimeout(() => setLoading(false), 1000); // slight delay
+      setTimeout(() => setLoading(false), 300); // slight delay
       return;
     }
 
     const checkAllImagesLoaded = () => {
       loadedCount++;
       if (loadedCount === images.length) {
-        setTimeout(() => setLoading(false), 1000); // delay after images are loaded
+        setTimeout(() => setLoading(false), 300); // delay after images are loaded
       }
     };
 
